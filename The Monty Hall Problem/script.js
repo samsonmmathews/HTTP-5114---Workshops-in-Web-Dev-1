@@ -1,7 +1,7 @@
 var min = 0, max = 3;
 var winningDoor, choice, removeDoor;
 var switchCounter = 0, stayCounter = 0, total = 0; 
-var percentage = 0;
+var switchPercentage = 0, stayPercentage = 0;
 
 winningDoor = Math.ceil(Math.random() * (max - min) ) + min;
 // var winningDoor = Math.ceil(Math.random(0,3));
@@ -28,5 +28,11 @@ else
     total++;
 }
 
+stayPercentage = (stayCounter / total) * 100;
+switchPercentage = (switchCounter / total) * 100;
 
-
+console.log("stayCounter: " + stayCounter);
+console.log("switchCounter: " + switchCounter);
+console.log("total: " + total);
+console.log("stayPercentage: " + stayPercentage);
+console.log("switchPercentage: " + switchPercentage);
